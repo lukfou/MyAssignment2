@@ -1,0 +1,56 @@
+import android.os.Bundle
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.*
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.filters.LargeTest
+import androidx.test.rule.ActivityTestRule
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+
+@RunWith(AndroidJUnit4::class)
+@LargeTest
+class NewActivityTest {
+
+    @Rule
+    @JvmField
+    val activityRule = ActivityTestRule(NewActivity::class.java)
+
+    @Test
+    fun testFeedButton() {
+        // Click on the FeedButton
+        onView(withId(R.id.myHunger)).perform(click())
+
+        // Assert that the image changes to the correct one
+        onView(withId(R.id.MainImageView)).check(matches(withDrawable(R.drawable.mydog)))
+
+        // Assert that the HungerTextView updates correctly
+        onView(withId(R.id.HngTextView)).check(matches(withText("3"))) // Assuming currentHintValue1 starts from 2
+    }
+
+    @Test
+    fun testCleanButton() {
+        // Click on the CleanButton
+        onView(withId(R.id.myClean)).perform(click())
+
+        // Assert that the image changes to the correct one
+        onView(withId(R.id.MainImageView)).check(matches(withDrawable(R.drawable.mydog2)))
+
+        // Assuming CleanTextView updates similarly to HungerTextView
+    }
+
+    @Test
+    fun testPlayButton() {
+        // Click on the PlayButton
+        onView(withId(R.id.myPlay)).perform(click())
+
+        // Assert that the image changes to the correct one
+        onView(withId(R.id.MainImageView)).check(matches(withDrawable(R.drawable.mydog3)))
+
+        // Assuming HappyTextView updates similarly to HungerTextView
+    }
+
+    // You can add more test methods as needed to cover other functionalities of onCreate
+}
