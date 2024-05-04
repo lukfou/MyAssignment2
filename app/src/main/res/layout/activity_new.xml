@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/myHunger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="317dp"
+        android:text="Feed"
+        app:layout_constraintBottom_toTopOf="@+id/myClean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/myClean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="317dp"
+        android:layout_marginBottom="31dp"
+        android:text="wash"
+        app:layout_constraintBottom_toTopOf="@+id/plyTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myHunger" />
+
+    <Button
+        android:id="@+id/myPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="301dp"
+        android:layout_marginBottom="30dp"
+        android:text="Maintain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myClean"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/MainImageView"
+        android:layout_width="363dp"
+        android:layout_height="254dp"
+        app:srcCompat="@drawable/pug"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="73dp"
+        tools:srcCompat="@drawable/pug" />
+
+    <TextView
+        android:id="@+id/HngTextView"
+        android:layout_width="145dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="118dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="84dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/ClnTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myHunger"
+        app:layout_constraintTop_toBottomOf="@+id/MainImageView" />
+
+    <TextView
+        android:id="@+id/ClnTextView"
+        android:layout_width="139dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myClean"
+        app:layout_constraintTop_toBottomOf="@+id/HngTextView" />
+
+    <TextView
+        android:id="@+id/plyTextView"
+        android:layout_width="139dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="37dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myPlay"
+        app:layout_constraintTop_toBottomOf="@+id/ClnTextView" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="292dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="41dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/HngTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MainImageView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
